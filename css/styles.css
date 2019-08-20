@@ -1,0 +1,125 @@
+body {
+    background: black;
+    color: #FFF;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+header > .logo {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+header > .navbar-toggle {
+    float: right;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
+
+.sidebar {
+    display: none;
+}
+
+.content {
+    padding-left: 1rem;
+    padding-top: 4rem;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.first-section {
+    margin: 0 auto; 
+}
+
+.first-section  > h1{
+    font-size: 2.7rem;
+    width: 100%;
+}
+
+.astro-img {
+    display: none;
+}
+
+.hire-button {
+    border: none;
+    background: transparent;
+    color: #FFF;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.hire-button::before {
+    content: 'H';
+}
+
+.hire-button::after {
+    content: 'IRE US \2192';
+    background: blue;
+    padding: 0.7rem 1.7rem 0.7rem 0rem;
+}
+
+
+@media (min-width: 780px) {
+    #wrapper {
+        grid-template-columns: 10% auto;
+        grid-template-areas: 
+        'header header'
+        'sidebar content';
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        display: block;
+        height: 100%;
+        padding-top: 6rem;
+        padding-left: 1.8rem;
+    }
+
+    .sidebar ul {
+        border-left: 1px solid lightgray;
+        padding-left: 0.8rem;
+        padding-top: 1.5rem;
+    }
+
+    .sidebar ul li {
+        padding-bottom: 4rem;
+        list-style: disc;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    .content {
+        grid-area: content;
+        margin-top: 0;
+        height: 100%;
+        padding-left: 5rem;
+    }
+
+    .first-section > h1 {
+        padding-top: 3rem;
+    }
+
+    .astro-img {
+        display: block;
+        float: right;
+        position: fixed;
+        margin-top: -250px;
+        margin-left: 26%;
+    }
+
+
+
+}
